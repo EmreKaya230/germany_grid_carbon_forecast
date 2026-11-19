@@ -17,8 +17,14 @@ Date: 18.11.2026
 - Date parameters (start/end) seem to follow German local time, while the returned timestamps are in UTC (the first timestamp for start=2023-04-01 was 31.03.2023 22:00 UTC).
 
 ## 2. Open-Meteo API (features: weather)
-- (to be filled after tomorrow's test)
-
+- I used Open-Meteo Historical Weather API, hourly data, timezone GMT+0 (UTC).
+- Timestamps looks like `2023-04-14T00:00` values are UTC and will be marked as UTC in code.
+-  In the API request, I used latitude and longitude as a 51.5 and 10.5 (Germany location) but API used closest grid like 51.4938 N, 10.4348 E, 309 m elevation. Moreover for timezone I used GMT+0. I am using 4 different Variables like;
+- Temperature (Celsius)
+- Wind Speed(100 m)(km/h) , I used 100 m because it is mainly about wind turbines. 
+- Cloud Cover Total(%) , It is related to sun.
+- Shortwave Solar Radiation GHI(W/m square).
+  - Radiation is the average of the preceding hour, other variables are instantaneous values.
 ## 3. Date range decision
 - Start: 16.04.2023
 - Reason: last nuclear plants shut down on 15.04.2023, permanent change in the grid mix
