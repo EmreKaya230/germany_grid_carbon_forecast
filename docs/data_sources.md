@@ -16,7 +16,7 @@ Date: 18.11.2026
 - Rate limits: stricter limits were introduced for the public API; I did not find exact numbers, so I will fetch month by month with short pauses.
 - Date parameters (start/end) seem to follow German local time, while the returned timestamps are in UTC (the first timestamp for start=2023-04-01 was 31.03.2023 22:00 UTC).
 
-## 2. Open-Meteo API (features: weather)
+## 2. (features: weather)
 - I used Open-Meteo Historical Weather API, hourly data, timezone GMT+0 (UTC).
 - Timestamps looks like `2023-04-14T00:00` values are UTC and will be marked as UTC in code.
 -  In the API request, I used latitude and longitude as a 51.5 and 10.5 (Germany location) but API used closest grid like 51.4938 N, 10.4348 E, 309 m elevation. Moreover for timezone I used GMT+0. I am using 4 different Variables like;
@@ -38,3 +38,6 @@ Date: 18.11.2026
 - Meaning of the sign in "Cross border electricity trading"
 - Pumped storage treatment
 - Load: the real measured load is not known at forecast time. A day ahead load forecast could be used as a feature instead. To be decided.
+- Emission factor and type?
+- Is there a 1 hour shift between radiatiın and generation timestamps?
+- Does Historical API covers 16 APR 2023?

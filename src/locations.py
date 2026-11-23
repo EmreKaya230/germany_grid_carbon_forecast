@@ -14,3 +14,5 @@ LOCATIONS = {
     "offshore_north_sea" : (54.0, 6.6), # North Sea
     "offshore_baltic" : (54.7, 13.0), #Baltic Sea
 }
+
+#print(len(LOCATIONS))
